@@ -1,0 +1,7 @@
+Package: info-tool
+Version: 1.0
+Section: utils
+Priority: optional
+Architecture: all
+Maintainer: Tzahi Turgeman <Tzahi.t@hackerseye.com>
+Description: GUI tool for basic privilege escalation checks

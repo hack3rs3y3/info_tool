@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Privilege Escalation Info
+Exec=/usr/local/bin/info_tool
+Icon=utilities-terminal
+Type=Application
+Categories=Utility;

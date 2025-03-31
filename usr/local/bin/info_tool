@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+import os
+import tkinter as tk
+from tkinter.scrolledtext import ScrolledText
+import subprocess
+
+def run_checks():
+    output = ""
+
+    output += "=== Users (/etc/passwd) ===\n"
+    try:
+        with open("/etc/passwd", "r") as f:
+            output += f.read()
+    except Exception as e:
+        output += f"Error: {e}\n"
+
+    output += "\n\n\n=== Writable files in /etc ===\n"
+    writable_files = subprocess.getoutput("find /etc -writable -type f 2>/dev/null")
+    output += writable_files + "\n"
+
+    output += "\n\n\n=== /etc/crontab ===\n"
+    try:
+        with open("/etc/crontab", "r") as f:
+            output += f.read()
+    except Exception as e:
+        output += f"Error: {e}\n"
+
+    output += "\n\n\n=== Files with SETUID ===\n"
+    setuid_files = subprocess.getoutput("find / -perm -4000 -type f 2>/dev/null")
+    output += setuid_files + "\n"
+
+    result_box.delete(1.0, tk.END)
+    result_box.insert(tk.END, output)
+
+root = tk.Tk()
+root.title("HackersEye Privilege Escalation Info")
+root.geometry("800x600")
+
+btn = tk.Button(root, text="Run Info Scan", command=run_checks)
+btn.pack(pady=10)
+
+result_box = ScrolledText(root, wrap=tk.WORD)
+result_box.pack(expand=True, fill=tk.BOTH, padx=10, pady=10)
+
+root.mainloop()
