@@ -12,10 +12,11 @@ This is a **simple GUI tool** designed for educational purposes. It allows regul
 ## 🔧 How to Install
 
 1. **Clone the repository**:
-git clone https://github.com/YOUR_USERNAME/info-tool.git
+git clone https://github.com/hack3rs3y3/info_tool.git
 
 
 2. **Install it**:
+cd info_tool
 sudo dpkg -i info-tool.deb
 
 3. **Run the tool**:
