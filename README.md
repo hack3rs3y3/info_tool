@@ -12,8 +12,9 @@ This is a **simple GUI tool** designed for educational purposes. It allows regul
 ## 🔧 How to Install
 
 1. **Clone the repository**:
+```bash
 git clone https://github.com/hack3rs3y3/info_tool.git
-
+```
 
 2. **Install it**:
 ```bash
