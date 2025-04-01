@@ -19,8 +19,9 @@ git clone https://github.com/hack3rs3y3/info_tool.git
 ```bash
 cd info_tool
 sudo dpkg -i info-tool.deb
-
+```
 3. **Run the tool**:
+```bash
 info_tool
 ```
 ## 🧪 Tested on:
