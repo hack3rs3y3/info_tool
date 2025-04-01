@@ -16,6 +16,7 @@ git clone https://github.com/hack3rs3y3/info_tool.git
 
 
 2. **Install it**:
+```bash
 cd info_tool
 sudo dpkg -i info-tool.deb
 
