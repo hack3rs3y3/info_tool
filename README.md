@@ -22,7 +22,7 @@ sudo dpkg -i info-tool.deb
 
 3. **Run the tool**:
 info_tool
-
+```
 ## 🧪 Tested on:
 
 - Kali Linux 2023+
