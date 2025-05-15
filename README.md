@@ -23,7 +23,7 @@ sudo dpkg -i info-tool.deb
 ```
 3. **Run the tool**:
 ```bash
-info_tool
+info-tool
 ```
 ## 🧪 Tested on:
 
